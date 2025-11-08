@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>La Mansión del Stream — Reality 24/7</title>
+  <meta name="description" content="La Mansión del Stream — Reality 24/7: el reality número 1 del streaming global. Influencers, interactividad, sponsors y contenido multiplataforma." />
+  <style>
+    :root{
+      --bg:#07070a;
+      --card:#0d0d11;
+      --muted:#aab1b8;
+      --accent1:#7d3cff; /* púrpura */
+      --accent2:#00d4ff; /* cian */
+      --gold:#f0b61a;   /* dorado más brillante */
+      --glass: rgba(255,255,255,0.03);
+      --maxw:1250px;
+      --radius:12px;
+      --ff: Inter, 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    /* RESET + BASE */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--ff);
+      background:linear-gradient(180deg,#050506 0%, #0b0b0c 100%);
+      color:#eef2f7;
+      -webkit-font-smoothing:antialiased;
+      line-height:1.5;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:28px}
+
+    /* HEADER */
+    header{
+      position:fixed;inset:0 0 auto 0;z-index:90;
+      background:linear-gradient(180deg, rgba(8,8,10,0.95), rgba(8,8,10,0.6));
+      backdrop-filter: blur(6px);
+      border-bottom:1px solid rgba(255,255,255,0.03);
+    }
+    .container{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 28px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:800}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:#cfd6da;font-weight:600;font-size:14px;opacity:0.95;padding:6px 8px;border-radius:8px}
+    nav a:hover{color:var(--accent2);background:rgba(255,255,255,0.01)}
+    .actions{display:flex;gap:10px;align-items:center}
+    .btn{padding:10px 14px;border-radius:10px;font-weight:700;border:0;cursor:pointer}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:#d2d7db}
+    .btn-primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));box-shadow:0 8px 30px rgba(125,60,255,0.12);color:#081018}
+
+    /* MAIN / HERO */
+    main{margin-top:92px;padding:28px}
+    .hero{
+      display:grid;grid-template-columns:1fr 520px;gap:28px;align-items:center;
+      padding:36px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.03)
+    }
+    .kicker{display:inline-block;padding:6px 12px;border-radius:999px;background:linear-gradient(90deg, rgba(125,60,255,0.08), rgba(0,212,255,0.04));font-weight:700;color:var(--accent1);margin-bottom:12px}
+    .rotator{display:flex;align-items:center;gap:8px;margin-bottom:8px;color:var(--muted);font-weight:600}
+    .rot-text{font-weight:800;color:#fff}
+    .hero h1{font-size:42px;line-height:1.02;margin:6px 0 14px;font-weight:800}
+    .hero p{color:var(--muted);font-size:16px;margin:0 0 20px;max-width:60ch}
+    .hero-cta{display:flex;gap:12px;align-items:center;margin-bottom:8px}
+    .badge-row{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+    .badge{background:rgba(255,255,255,0.02);padding:8px 12px;border-radius:999px;font-size:13px;color:var(--muted);border:1px solid rgba(255,255,255,0.03)}
+
+    /* hero visual */
+    .hero-right{position:relative;height:320px;border-radius:14px;overflow:hidden;background:radial-gradient(circle at 40% 40%, rgba(125,60,255,0.16), transparent 18%), radial-gradient(circle at 70% 60%, rgba(0,212,255,0.06), transparent 30%), linear-gradient(180deg,#070709,#0c0c10);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 30px 60px rgba(0,0,0,0.5)}
+    .neon-orb{width:420px;height:220px;border-radius:18px;background:radial-gradient(circle at 50% 40%, rgba(125,60,255,0.6), rgba(0,0,0,0.0) 40%), radial-gradient(circle at 70% 60%, rgba(0,212,255,0.18), transparent 35%);filter:blur(12px);animation:orbMove 12s linear infinite}
+    @keyframes orbMove{0%{transform:translate(-10px,0) scale(1)}25%{transform:translate(14px,-6px) scale(1.02)}50%{transform:translate(-6px,8px) scale(1)}75%{transform:translate(8px,10px) scale(1.01)}100%{transform:translate(-10px,0) scale(1)}}
+
+    /* SECTION BASE */
+    section{margin:34px auto;padding:0;border-radius:12px;max-width:var(--maxw)}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));padding:22px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+    .section-title{font-size:20px;color:var(--gold);margin:0}
+    .lead{color:var(--muted);margin:0 0 12px}
+
+    /* COLUMNS / CARDS */
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .col-card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);min-height:120px;display:flex;flex-direction:column;gap:10px;transition:transform .18s,box-shadow .18s}
+    .col-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,0.6)}
+    .col-card h4{margin:0;color:#fff;font-size:16px}
+    .col-card p{margin:0;color:var(--muted);font-size:14px}
+
+    /* PLATFORMS */
+    .platforms{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:12px}
+    .platform-item{display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:10px;background:rgba(255,255,255,0.01);border:1px solid rgba(255,255,255,0.03);transition:transform .18s,box-shadow .18s}
+    .platform-item:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,0.6)}
+    .platform-icon{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;flex-shrink:0}
+    .platform-meta h5{margin:0 0 6px;font-size:16px;color:#fff}
+    .platform-meta p{margin:0;color:var(--muted);font-size:13px}
+
+    /* SPONSORS */
+    .sponsor-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
+    .sponsor-card{display:flex;align-items:center;justify-content:center;padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.03);min-height:72px;color:var(--muted);transition:transform .18s}
+    .sponsor-card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(0,0,0,0.6)}
+
+    /* TEAM */
+    .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}
+    .team-card{display:flex;gap:12px;align-items:center;padding:12px;border-radius:10px;background:rgba(255,255,255,0.01);border:1px solid rgba(255,255,255,0.03)}
+    .avatar{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#081018}
+    .team-meta h5{margin:0;font-size:16px}
+    .team-meta p{margin:0;color:var(--muted);font-size:13px}
+
+    /* FAQ / DETAILS */
+    details{background:rgba(255,255,255,0.02);border-radius:10px;padding:12px;margin-bottom:10px;border:1px solid rgba(255,255,255,0.03)}
+    summary{font-weight:700;cursor:pointer;list-style:none}
+    details[open]{box-shadow:0 10px 30px rgba(0,0,0,0.5)}
+
+    /* FOOTER */
+    footer{margin-top:28px;padding:22px;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+    .legal{color:var(--muted);font-size:13px}
+    .socials a{display:inline-block;margin-left:8px;color:var(--accent2);font-weight:700}
+
+    /* RESPONSIVE */
+    @media (max-width:1100px){
+      .platforms{grid-template-columns:repeat(2,1fr)}
+      .sponsor-grid{grid-template-columns:repeat(3,1fr)}
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+      .hero{grid-template-columns:1fr 420px}
+    }
+    @media (max-width:820px){
+      nav{display:none}
+      .hero{grid-template-columns:1fr;gap:18px;padding:20px}
+      .hero-right{height:220px}
+      .platforms{grid-template-columns:1fr}
+      .sponsor-grid{grid-template-columns:repeat(2,1fr)}
+      .team-grid{grid-template-columns:repeat(2,1fr)}
+      .grid-4{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:480px){
+      .container{padding:10px 16px}
+      .logo{width:40px;height:40px}
+      main{padding:14px}
+      .hero h1{font-size:28px}
+      .hero p{font-size:15px}
+      .team-grid{grid-template-columns:1fr}
+    }
+
+    /* small helpers */
+    .muted{color:var(--muted)} .center{text-align:center}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <div class="logo">M</div>
+        <div>
+          <div style="font-weight:800;color:#fff">La Mansión del Stream</div>
+          <div style="font-size:12px;color:var(--muted)">Reality 24/7 — SoftMagno LLC / FacuGo! Enterprises</div>
+        </div>
+      </div>
+
+      <nav aria-label="Navegación principal">
+        <a href="#que-es">Qué es</a>
+        <a href="#donde">Dónde se televisa</a>
+        <a href="#app">Cómo funciona</a>
+        <a href="#faq">FAQ</a>
+        <a href="#sponsors">Sponsors</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="actions">
+        <button class="btn btn-ghost" id="verComo">Ver cómo funciona</button>
+        <button class="btn btn-primary" id="postularBtn">Postular</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO (sin cambios funcionales, solo visual mejorado) -->
+    <section class="hero" role="region" aria-label="Hero principal">
+      <div>
+        <div class="kicker">El reality número 1 del streaming global</div>
+        <div class="rotator"><div class="muted">Ahora:</div><div class="rot-text" id="rotatingPhrase" aria-live="polite">El reality 24/7</div></div>
+        <h1>La Mansión del Stream — Donde el público decide</h1>
+        <p>Influencers, streamers y creadores conviven en una casa real equipada para producción 24/7. Una experiencia multiplataforma pensada para la audiencia moderna: interacción real, votaciones, eventos y contenido exclusivo.</p>
+
+        <div class="hero-cta">
+          <button class="btn btn-primary" id="ctaHow">Ver cómo funciona</button>
+          <button class="btn btn-ghost" id="ctaApply">Postular</button>
+        </div>
+
+        <div class="badge-row" aria-hidden="true">
+          <div class="badge">APP Oficial — 24/7 Live</div>
+          <div class="badge">Kick — Shows & Donaciones</div>
+          <div class="badge">YouTube — Clips & Highlights</div>
+        </div>
+
+        <div style="margin-top:18px;color:var(--muted);font-size:14px">
+          <strong>Producción oficial:</strong> FacuGo! Enterprises, LLC — bajo la sociedad SoftMagno LLC (Louisville, KY, USA).
+        </div>
+      </div>
+
+      <div class="hero-right" aria-hidden="true">
+        <div class="neon-orb" id="neonOrb" title="Visual hero"></div>
+      </div>
+    </section>
+
+    <!-- REDISEÑADO: ¿Qué es / Objetivo (mejor orden y visual) -->
+    <section id="que-es" class="card" aria-labelledby="que-es-title">
+      <div class="section-head">
+        <h3 id="que-es-title" class="section-title">¿Qué es La Mansión del Stream?</h3>
+        <div class="muted">Formato nativo del streaming — Interacción en tiempo real</div>
+      </div>
+
+      <p class="lead">La Mansión del Stream es la evolución del entretenimiento digital: un reality show nativo del streaming, diseñado para la era de la interacción inmediata. Combinamos producción profesional, tecnología multistream y comunidad para crear una experiencia única y medible.</p>
+
+      <div class="grid-3" role="presentation" style="margin-top:14px">
+        <div class="col-card">
+          <h4>Formato híbrido</h4>
+          <p>Transmisión 24/7 en APP, shows en vivo en plataformas sociales y piezas de alto impacto para redes. Producción escalable y flujos técnicos redundantes.</p>
+        </div>
+        <div class="col-card">
+          <h4>Audiencia activa</h4>
+          <p>Votaciones en tiempo real, desbloqueos por membresía y dinámicas que permiten al público afectar decisiones dentro del programa.</p>
+        </div>
+        <div class="col-card">
+          <h4>Integridad & cumplimiento</h4>
+          <p>Contratos claros, zonas off-camera, procesos de consentimiento y políticas de privacidad acordes a estándares internacionales.</p>
+        </div>
+      </div>
+
+      <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:18px 0">
+
+      <div class="section-head" style="margin-bottom:6px">
+        <h3 class="section-title">Objetivo del Reality</h3>
+        <div class="muted">Misión, Visión y Valores</div>
+      </div>
+
+      <p class="lead">Nuestra misión es liderar la transformación del entretenimiento en vivo a escala global combinando la calidad de la producción tradicional con la agilidad y autenticidad de los creadores digitales.</p>
+
+      <div class="grid-3" role="presentation" style="margin-top:12px">
+        <div class="col-card">
+          <h4>Misión</h4>
+          <p>Crear el espacio más influyente y participativo para creadores digitales, donde la comunidad impacte activamente el contenido.</p>
+        </div>
+        <div class="col-card">
+          <h4>Visión</h4>
+          <p>Ser la marca de reality líder en el ecosistema streaming, con estándares que definan nuevas formas de producción y monetización.</p>
+        </div>
+        <div class="col-card">
+          <h4>Valores</h4>
+          <p>Transparencia, innovación, respeto por la audiencia y excelencia técnica en cada transmisión.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATAFORMAS: ahora visual y legible -->
+    <section id="donde" class="card" aria-labelledby="plataformas-title">
+      <div class="section-head">
+        <h3 id="plataformas-title" class="section-title">Plataformas Oficiales</h3>
+        <div class="muted">Ecosistema de distribución & monetización</div>
+      </div>
+
+      <p class="lead">Distribuimos el contenido en un ecosistema diseñado para maximizar alcance, monetización y retención, adaptando el mensaje a cada canal.</p>
+
+      <div class="platforms" role="list">
+        <div class="platform-item" role="listitem">
+          <div class="platform-icon">APP</div>
+          <div class="platform-meta">
+            <h5>APP Oficial — 24/7</h5>
+            <p>Hub central con multivista, votaciones, login de miembros y contenidos exclusivos.</p>
+          </div>
+        </div>
+
+        <div class="platform-item" role="listitem">
+          <div class="platform-icon">K</div>
+          <div class="platform-meta">
+            <h5>Kick — Vivos</h5>
+            <p>Transmisiones en vivo con interacción, donaciones y shows especiales para la comunidad.</p>
+          </div>
+        </div>
+
+        <div class="platform-item" role="listitem">
+          <div class="platform-icon">YT</div>
+          <div class="platform-meta">
+            <h5>YouTube — Clips & Highlights</h5>
+            <p>Distribución de clips virales y resúmenes con enfoque en descubrimiento orgánico.</p>
+          </div>
+        </div>
+
+        <div class="platform-item" role="listitem">
+          <div class="platform-icon">IG</div>
+          <div class="platform-meta">
+            <h5>Instagram / TikTok</h5>
+            <p>Contenido nativo y campañas virales para captación y conversión hacia la APP.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPONSORS: enfoque B2B + details -->
+    <section id="sponsors" class="card" aria-labelledby="sponsors-title">
+      <div class="section-head">
+        <h3 id="sponsors-title" class="section-title">Información para Sponsors</h3>
+        <div class="muted">Soluciones de marca integradas y medibles</div>
+      </div>
+
+      <p class="lead">Ofrecemos integraciones estratégicas para marcas que buscan reach, engagement real y medición precisa del retorno. Diseñamos activaciones que conviven de forma orgánica dentro del contenido.</p>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+        <div style="flex:1;min-width:240px" class="col-card">
+          <h4>Integración orgánica</h4>
+          <p>Product placement natural, branded rooms y pruebas patrocinadas que se incorporan al día a día de la casa.</p>
+        </div>
+        <div style="flex:1;min-width:240px" class="col-card">
+          <h4>Activaciones y eventos</h4>
+          <p>Eventos VIP, meet&greets y finales en vivo con posibilidades de hospitality y activaciones presenciales.</p>
+        </div>
+        <div style="flex:1;min-width:240px" class="col-card">
+          <h4>Medición & Reportes</h4>
+          <p>Dashboards con VTR, tiempo medio de reproducción, CTR y conversiones. Reportes post-campaña con insights operativos.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:16px">
+        <div style="font-weight:800;margin-bottom:10px;color:#fff">Partners (placeholders)</div>
+        <div class="sponsor-grid" aria-hidden="true">
+          <div class="sponsor-card">Logo Sponsor 1</div>
+          <div class="sponsor-card">Logo Sponsor 2</div>
+          <div class="sponsor-card">Logo Sponsor 3</div>
+          <div class="sponsor-card">Logo Sponsor 4</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APP / FUNCIONALIDAD -->
+    <section id="app" class="card" aria-labelledby="app-title">
+      <div class="section-head">
+        <h3 id="app-title" class="section-title">Cómo funciona la App</h3>
+        <div class="muted">Control, interacción y monetización centralizada</div>
+      </div>
+
+      <p class="lead">La APP centraliza la experiencia: vistas múltiples, votaciones, recompensas y herramientas para patrocinadores.</p>
+
+      <div class="grid-3" style="margin-top:12px">
+        <div class="col-card">
+          <h4>Multivista & Timeline</h4>
+          <p>Seleccioná cámaras, revisitá momentos y contrastá ángulos en tiempo real.</p>
+        </div>
+        <div class="col-card">
+          <h4>Votaciones & Tokens</h4>
+          <p>Paga por votos prioritarios, envía tokens para desbloquear escenas o eventos exclusivos.</p>
+        </div>
+        <div class="col-card">
+          <h4>Moderación & Seguridad</h4>
+          <p>Chat moderado, filtros y herramientas para garantizar integridad en interacciones en vivo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="card">
+      <div class="section-head">
+        <h3 class="section-title">Preguntas Frecuentes</h3>
+        <div class="muted">Dudas comunes sobre postulaciones, contratos y participación</div>
+      </div>
+
+      <details><summary>¿Cómo me postulo para entrar a la casa?</summary><p>Completá el formulario de casting desde la APP o enviá tu propuesta (redes + video) al correo de contacto. El proceso incluye filtros por presencia de cámara, entrevistas y pruebas en vivo.</p></details>
+      <details><summary>¿Qué duración tienen los contratos?</summary><p>Los contratos varían: temporada completa o invitaciones por episodios. Las ofertas incluyen cláusulas de participación en ingresos y compensaciones acordes a la exposición.</p></details>
+      <details><summary>¿Cómo participa la audiencia?</summary><p>Mediante votaciones en la APP y transmisiones en vivo (Kick). Algunas votaciones son gratuitas, otras premium para resultados con prioridad.</p></details>
+      <details><summary>¿Qué garantías legales existen?</summary><p>Todos los participantes firman consentimientos y contratos que protegen derechos de imagen, datos y privacidad; la producción cumple normativas locales e internacionales.</p></details>
+    </section>
+
+    <!-- PRODUCCIÓN & EQUIPO -->
+    <section id="equipo" class="card" aria-labelledby="equipo-title">
+      <div class="section-head">
+        <h3 id="equipo-title" class="section-title">Producción & Equipo</h3>
+        <div class="muted">FacuGo! Enterprises, LLC — bajo SoftMagno LLC</div>
+      </div>
+
+      <p class="lead">Producción oficial: <strong>FacuGo! Enterprises, LLC</strong> — proyecto bajo la sociedad <strong>SoftMagno LLC — Louisville, KY, USA</strong>. Equipo con experiencia en TV, e-sports y producción digital.</p>
+
+      <div class="team-grid" role="list">
+        <div class="team-card" role="listitem">
+          <div class="avatar">SG</div>
+          <div class="team-meta"><h5>Showrunner</h5><p>Experiencia en formatos transmedia y dirección creativa.</p></div>
+        </div>
+
+        <div class="team-card" role="listitem">
+          <div class="avatar">DT</div>
+          <div class="team-meta"><h5>Dirección Técnica</h5><p>Operaciones en vivo, encoders y redundancia de señal.</p></div>
+        </div>
+
+        <div class="team-card" role="listitem">
+          <div class="avatar">GC</div>
+          <div class="team-meta"><h5>Growth & Community</h5><p>Estrategias para adquisición, retención y monetización.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="card center">
+      <h3 class="section-title">Contacto</h3>
+      <p class="lead">Alianzas, prensa y casting — escribinos para propuestas comerciales y partnerships.</p>
+      <p style="margin-top:8px"><strong>Email:</strong> <a href="mailto:contacto@lamansiondelstream.com">contacto@lamansiondelstream.com</a></p>
+      <p style="margin-top:6px"><strong>Oficina:</strong> Louisville, KY, USA</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="legal">La Mansión del Stream is a project by SoftMagno LLC, Louisville, KY, USA. All Rights Reserved. — <strong>El reality número 1 del streaming global</strong></div>
+    <div class="socials">Síguenos: <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></div>
+  </footer>
+
+  <!-- Modal Postular (simple) -->
+  <div id="modal" style="display:none;position:fixed;inset:0;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:200">
+    <div style="width:720px;max-width:94%;border-radius:12px;background:linear-gradient(180deg,#0b0b0b,#0f0f11);padding:18px;border:1px solid rgba(255,255,255,0.04)">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <h3 style="margin:0">Formulario de Postulación</h3>
+        <button id="closeModal" class="btn btn-ghost">Cerrar</button>
+      </div>
+      <form id="applyForm">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <input placeholder="Nombre completo" required style="padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit" />
+          <input placeholder="Email" required style="padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit" />
+        </div>
+        <input placeholder="Red principal (handle)" style="width:100%;margin-top:10px;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit" />
+        <input placeholder="Video URL (YouTube / Drive)" style="width:100%;margin-top:10px;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit" />
+        <div style="display:flex;justify-content:flex-end;margin-top:12px">
+          <button class="btn btn-primary" type="submit">Enviar postulación</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Rotating hero phrases
+    const phrases = ["El reality 24/7", "El fenómeno digital", "Donde todo se transmite", "La experiencia multiplataforma"];
+    let i = 0;
+    const rotEl = document.getElementById('rotatingPhrase');
+    setInterval(()=>{ i = (i+1) % phrases.length; rotEl.style.opacity = 0; setTimeout(()=>{ rotEl.textContent = phrases[i]; rotEl.style.opacity = 1 }, 300) }, 3500);
+
+    // Smooth scroll for CTA
+    function scrollToId(id){ const el = document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth',block:'start'}); }
+    document.getElementById('verComo').addEventListener('click',()=>scrollToId('app'));
+    document.getElementById('ctaHow').addEventListener('click',()=>scrollToId('app'));
+    document.getElementById('ctaApply').addEventListener('click',()=>openModal());
+    document.getElementById('postularBtn').addEventListener('click',()=>openModal());
+
+    // Modal logic
+    const modal=document.getElementById('modal');
+    const close=document.getElementById('closeModal');
+    function openModal(){ modal.style.display='flex'; document.body.style.overflow='hidden' }
+    function closeModal(){ modal.style.display='none'; document.body.style.overflow='auto' }
+    close.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e)=>{ if(e.target===modal) closeModal() });
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal() });
+
+    // Apply form placeholder
+    document.getElementById('applyForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Postulación enviada (demo). Implementá backend para recepción real).');
+      closeModal();
+      this.reset();
+    });
+
+    // Accessibility: ensure details summary keyboard toggle
+    document.querySelectorAll('summary').forEach(s => s.setAttribute('tabindex','0'));
+
+    // Console note for devs
+    console.log('REPLACE ASSETS: /assets/logo.png, sponsor logos and platform icons. Recommended sizes: hero visual 1600x900, sponsor logos 400x200.');
+  </script>
+
+  <!-- NOTES:
+    - Reemplazar sponsor-card y avatar por imágenes en /assets/ (PNG/WebP).
+    - Para performance: optimizar imágenes, usar lazy-loading y agregar analytics en producción.
+  -->
+</body>
+</html>
